@@ -1,0 +1,9 @@
+{
+	"name": "premfactory",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "839bc13d-8aeb-4f1b-b72d-a70c652fbc52",
+		"tenantId": "5afa1b8a-3e2c-465b-a34a-3f77f01a8e8a"
+	}
+}
