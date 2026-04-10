@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copydata1",
+				"name": "blobstoragescouresetodestination",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
