@@ -1,0 +1,65 @@
+{
+	"name": "Json3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "BostonHousing_test.json",
+				"container": "destination"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"crim": {
+					"type": "string"
+				},
+				"zn": {
+					"type": "string"
+				},
+				"indus": {
+					"type": "string"
+				},
+				"chas": {
+					"type": "string"
+				},
+				"nox": {
+					"type": "string"
+				},
+				"rm": {
+					"type": "string"
+				},
+				"age": {
+					"type": "string"
+				},
+				"dis": {
+					"type": "string"
+				},
+				"rad": {
+					"type": "string"
+				},
+				"tax": {
+					"type": "string"
+				},
+				"ptratio": {
+					"type": "string"
+				},
+				"b": {
+					"type": "string"
+				},
+				"lstat": {
+					"type": "string"
+				},
+				"medv": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
