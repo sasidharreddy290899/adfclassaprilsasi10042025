@@ -7,6 +7,18 @@
 		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
+		},
+		"ls_sqlseverdatabase_password": {
+			"value": ""
+		},
+		"ls_sqlseverdatabase_properties_typeProperties_server": {
+			"value": "testserver290899.database.windows.net"
+		},
+		"ls_sqlseverdatabase_properties_typeProperties_database": {
+			"value": "sqldatabase1"
+		},
+		"ls_sqlseverdatabase_properties_typeProperties_userName": {
+			"value": "Sasidharreddy"
 		}
 	}
 }
