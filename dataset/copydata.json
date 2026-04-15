@@ -1,0 +1,41 @@
+{
+	"name": "copydata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkserviceDl",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "employees.csv",
+				"folderPath": "retailstore",
+				"fileSystem": "source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "emp_id",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "role",
+				"type": "String"
+			},
+			{
+				"name": "store_id",
+				"type": "String"
+			}
+		]
+	}
+}
