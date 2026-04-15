@@ -35,6 +35,9 @@
 		"gitcop_properties_typeProperties_url": {
 			"value": "https://github.com/"
 		},
+		"githubserver_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
 		"linkgit_properties_typeProperties_url": {
 			"value": "https://github.com"
 		},
@@ -52,9 +55,6 @@
 		},
 		"ls_sqlseverdatabase_properties_typeProperties_userName": {
 			"value": "Sasidharreddy"
-		},
-		"githubserver_properties_typeProperties_url": {
-			"value": "https://raw.githubusercontent.com/"
 		},
 		"containerUri": {
 			"value": ""

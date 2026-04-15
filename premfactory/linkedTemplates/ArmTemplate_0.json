@@ -47,6 +47,10 @@
 			"type": "string",
 			"defaultValue": "https://github.com/"
 		},
+		"githubserver_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
 		"linkgit_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://github.com"
@@ -70,10 +74,6 @@
 		"ls_sqlseverdatabase_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Sasidharreddy"
-		},
-		"githubserver_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://raw.githubusercontent.com/"
 		}
 	},
 	"variables": {
@@ -146,6 +146,21 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/githubserver')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "HttpServer",
+				"typeProperties": {
+					"url": "[parameters('githubserver_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/linkgit')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -211,21 +226,6 @@
 			"properties": {
 				"type": "SelfHosted",
 				"typeProperties": {}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/githubserver')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "HttpServer",
-				"typeProperties": {
-					"url": "[parameters('githubserver_properties_typeProperties_url')]",
-					"enableServerCertificateValidation": true,
-					"authenticationType": "Anonymous"
-				}
 			},
 			"dependsOn": []
 		},
@@ -601,20 +601,20 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/copygethub')]",
+			"name": "[concat(parameters('factoryName'), '/copydatafromgithub')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "gitcop",
+					"referenceName": "linkserviceDl",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
-						"type": "HttpServerLocation",
-						"relativeUrl": "sasidharreddy290899/sasinew/refs/heads/main/customers.csv"
+						"type": "AzureBlobFSLocation",
+						"fileSystem": "destination"
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
@@ -624,7 +624,7 @@
 				"schema": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/gitcop')]"
+				"[concat(variables('factoryId'), '/linkedServices/linkserviceDl')]"
 			]
 		},
 		{

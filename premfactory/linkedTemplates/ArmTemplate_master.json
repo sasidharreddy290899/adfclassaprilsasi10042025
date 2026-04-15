@@ -47,6 +47,10 @@
 			"type": "string",
 			"defaultValue": "https://github.com/"
 		},
+		"githubserver_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
 		"linkgit_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://github.com"
@@ -70,10 +74,6 @@
 		"ls_sqlseverdatabase_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Sasidharreddy"
-		},
-		"githubserver_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://raw.githubusercontent.com/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -132,6 +132,9 @@
 					"gitcop_properties_typeProperties_url": {
 						"value": "[parameters('gitcop_properties_typeProperties_url')]"
 					},
+					"githubserver_properties_typeProperties_url": {
+						"value": "[parameters('githubserver_properties_typeProperties_url')]"
+					},
 					"linkgit_properties_typeProperties_url": {
 						"value": "[parameters('linkgit_properties_typeProperties_url')]"
 					},
@@ -149,9 +152,6 @@
 					},
 					"ls_sqlseverdatabase_properties_typeProperties_userName": {
 						"value": "[parameters('ls_sqlseverdatabase_properties_typeProperties_userName')]"
-					},
-					"githubserver_properties_typeProperties_url": {
-						"value": "[parameters('githubserver_properties_typeProperties_url')]"
 					}
 				}
 			},
