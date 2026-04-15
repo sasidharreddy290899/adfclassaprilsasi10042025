@@ -1,0 +1,22 @@
+{
+	"name": "datafromgithub",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "githubserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "sasidharreddy290899/sasinew/refs/heads/main/customers.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
